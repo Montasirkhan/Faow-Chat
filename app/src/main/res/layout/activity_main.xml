@@ -11,88 +11,6 @@
     android:background="#F4F6FA"
     tools:context=".MainActivity">
 
-    <!-- App Logo -->
-    <ImageView
-        android:id="@+id/appLogo"
-        android:layout_width="100dp"
-        android:src="@mipmap/ic_launcher_round"
-        android:layout_height="100dp"
-        android:layout_marginTop="80dp"/>
-
-
-    <!-- App Name -->
-    <TextView
-        android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="ChatConnect"
-        android:textColor="#222"
-        android:textSize="26sp"
-        android:textStyle="bold" />
-
-    <!-- Email Input -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:hint="Email"
-        app:boxStrokeColor="#3F51B5">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:padding="12dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Password Input -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Password"
-        app:endIconMode="password_toggle"
-        app:boxStrokeColor="#3F51B5">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:textColor="#EF0505"
-            android:padding="12dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Login Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:backgroundTint="#3F51B5"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="12dp" />
-
-    <!-- Register Link -->
-    <TextView
-        android:id="@+id/tvRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Don't have an account? Sign Up"
-        android:textColor="#3F51B5"
-        android:textSize="14sp"
-        android:clickable="true"
-        android:focusable="true" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
@@ -101,5 +19,6 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:navGraph="@navigation/main_nev" />
+
 
 </LinearLayout>

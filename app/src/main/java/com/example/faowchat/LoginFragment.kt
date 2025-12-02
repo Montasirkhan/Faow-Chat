@@ -31,7 +31,7 @@ class LoginFragment : Fragment() {
                 loginUser(email, password)
 
             } else {
-                // Invalid email or password
+
                 Toast.makeText(requireContext(), "Invalid email or password", Toast.LENGTH_SHORT).show()
             }
         }
@@ -43,6 +43,7 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
+
 
 
                     val user = auth.currentUser

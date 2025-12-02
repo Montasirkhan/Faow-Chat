@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:hint="Email"
+        android:textColorHint="#092CF0"
         app:boxStrokeColor="#3F51B5">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -57,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="Password"
+        android:textColorHint="#092CF0"
         app:endIconMode="password_toggle"
         app:boxStrokeColor="#3F51B5">
 
