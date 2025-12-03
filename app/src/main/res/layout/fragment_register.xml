@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:hint="Full Name"
+        android:hint="Name"
         app:boxStrokeColor="#3F51B5">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -86,25 +86,6 @@
             android:padding="12dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Confirm Password -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmPasswordInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="Confirm Password"
-        app:endIconMode="password_toggle"
-        app:boxStrokeColor="#3F51B5">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:padding="12dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <!-- Register Button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
@@ -120,7 +101,7 @@
 
     <!-- Login Link -->
     <TextView
-        android:id="@+id/tvLogin"
+        android:id="@+id/LoginBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

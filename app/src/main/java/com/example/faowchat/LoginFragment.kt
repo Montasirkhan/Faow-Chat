@@ -35,6 +35,10 @@ class LoginFragment : Fragment() {
                 Toast.makeText(requireContext(), "Invalid email or password", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.CreatNewAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
+        }
         return binding.root
     }
     private fun loginUser(email: String, password: String) {
@@ -43,9 +47,6 @@ class LoginFragment : Fragment() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-
-
-
                     val user = auth.currentUser
                     Toast.makeText(context, "Login successful: ${user?.email}", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
@@ -60,6 +61,9 @@ class LoginFragment : Fragment() {
                 }
             }
     }
+
+
+
         fun isEmailValid(email: String): Boolean {
             return Patterns.EMAIL_ADDRESS.matcher(email).matches()
         }
