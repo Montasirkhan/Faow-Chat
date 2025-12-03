@@ -42,7 +42,7 @@ class RegisterFragment : Fragment() {
 
     private fun registerUser(email: String, password: String, name: String) {
 
-   var auth = FirebaseAuth.getInstance()
+   val auth = FirebaseAuth.getInstance()
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener{ task ->
                 if (task.isSuccessful) {
