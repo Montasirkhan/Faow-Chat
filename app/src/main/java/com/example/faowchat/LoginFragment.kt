@@ -10,10 +10,12 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.faowchat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class LoginFragment : Fragment() {
 
-    private lateinit var binding: FragmentLoginBinding
+    lateinit var binding: FragmentLoginBinding
+    lateinit var firebaseUser: FirebaseUser
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +24,11 @@ class LoginFragment : Fragment() {
     ): View? {
 
         binding = FragmentLoginBinding.inflate(inflater, container, false)
+       FirebaseAuth.getInstance().currentUser?.let {
+           findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+
+        }
+
 
         binding.btnLogin.setOnClickListener {
 
